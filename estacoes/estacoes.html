@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Estações do ano</title>
+    <style>
+        body{
+            background: lightblue;
+        }
+    </style>
+</head>
+<body id="fundo">
+    <form>
+        <p><h1>Informe o mês</h1></p>
+        <input type="text" id="mes">
+        <input type="button" value="VERIFICAR" onclick="verificar()">
+        <div id="ver"> ... </div>
+    </form>
+    
+    <script>
+        function verificar(){
+            var n1 = window.document.getElementById('mes')
+            var nmes = (n1.value.toLowerCase())
+            switch(nmes){
+                case "janeiro":
+                case "fevereiro":
+                case "dezembro": 
+                    ver.innerText="É VERÃO"
+                    fundo.style.backgroundImage = `url('verao.jpg')`
+                    fundo.style.backgroundSize = "100%"
+                break
+                case "março":
+                case "abril": 
+                case "maio": 
+                    ver.innerText="É OUTONO"
+                    fundo.style.backgroundImage = `url('outono.jpg')`
+                break
+                case "junho": 
+                case "julho": 
+                case "agosto": 
+                    ver.innerText="É INVERNO"
+                    fundo.style.backgroundImage = `url('inverno.jpg')`
+                break
+                case "setembro":
+                case "outubro":
+                case "novembro":
+                    ver.innerText="É PRIMAVERA"
+                    fundo.style.backgroundImage = `url('primavera.jpg')`
+                break
+                default: 
+                ver.innerText="[ERRO] MÊS INVÁLIDO, digite um mês válido" 
+            }
+        }
+    </script>
+</body>
+</html>
